@@ -1,0 +1,141 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: site
+    label: Site Content
+    files:
+
+      - file: "public/content/site.json"
+        label: Site Settings
+        name: site_settings
+        format: json
+        fields:
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Club Name, name: clubName, widget: string }
+              - { label: Short Name, name: clubShort, widget: string, required: false }
+              - { label: Brand Subtitle, name: brandSub, widget: string, required: false }
+              - { label: Primary Logo, name: logoPrimary, widget: image, required: false }
+              - { label: Secondary Logo, name: logoSecondary, widget: image, required: false }
+              - label: Navigation Links
+                name: navLinks
+                widget: list
+                summary: "{{fields.label}} → {{fields.href}}"
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Kicker, name: kicker, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+              - label: Primary CTA
+                name: primaryCta
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+              - label: Secondary CTA
+                name: secondaryCta
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+          - label: Committee Section
+            name: committee
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Explore Section
+            name: explore
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Line 1, name: line1, widget: string }
+              - { label: Line 2, name: line2, widget: string, required: false }
+
+      - file: "public/content/explore.json"
+        label: Social Links (Explore)
+        name: explore_links
+        format: json
+        fields:
+          - label: Links
+            name: links
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: desc, widget: string, required: false }
+              - { label: Hint, name: hint, widget: string, required: false }
+              - { label: URL, name: url, widget: string }
+      - file: "public/content/events.json"
+        label: Events
+        name: events
+        format: json
+        fields:
+          - label: Events
+            name: events
+            widget: list
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: ID, name: id, widget: string, required: false }
+              - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Tag, name: tag, widget: string, required: false }
+              - { label: Location, name: location, widget: string, required: false }
+              - { label: Description, name: desc, widget: text, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+
+      - file: "public/content/committee.json"
+        label: Committee
+        name: committee
+        format: json
+        fields:
+          - label: Members
+            name: members
+            widget: list
+            summary: "{{fields.role}} — {{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Favourite Game / Tag, name: fav, widget: string, required: false }
+              - { label: Hover Message, name: msg, widget: text, required: false }
+              - { label: Photo, name: photo, widget: image, required: false }
+              - { label: Contact URL (optional), name: contactUrl, widget: string, required: false }
+              - { label: Apply URL (optional), name: applyUrl, widget: string, required: false }
+              - { label: Discord (legacy), name: discord, widget: string, required: false }
+              - { label: Email (legacy), name: email, widget: string, required: false }
+
+      - file: "public/content/highlights.json"
+        label: Past Semester Highlights
+        name: highlights
+        format: json
+        fields:
+          - label: Highlights
+            name: highlights
+            widget: list
+            summary: "{{fields.week}} {{fields.month}} — {{fields.title}}"
+            fields:
+              - { label: Key, name: key, widget: string }
+              - { label: Week, name: week, widget: string }
+              - { label: Month, name: month, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: sub, widget: string, required: false }
+              - { label: Image, name: image, widget: image, required: false }
