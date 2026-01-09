@@ -1,3 +1,9 @@
 {
-  "members": []
+  "members": [
+    {
+      "name": "Roger Cao",
+      "role": "President",
+      "fav": "HSR"
+    }
+  ]
 }
