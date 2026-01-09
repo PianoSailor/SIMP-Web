@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIMP | Student Institution of miHoYo Players · UniMelb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
+  <meta name="description"
+        content="Student Institution of miHoYo Players at the University of Melbourne. A place for Genshin Impact, Honkai: Star Rail, and Zenless Zone Zero players." />
+
+  <!-- Preconnect for font performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Hoyoverse-style font substitutes -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:opsz,wght@8..144,500;8..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Netlify Identity widget: only auto-opens when the URL contains an auth token -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    (function () {
+      if (!window.netlifyIdentity) return;
+
+      window.netlifyIdentity.on('init', function () {
+        var h = window.location.hash || '';
+        var hasToken =
+          h.indexOf('invite_token=') !== -1 ||
+          h.indexOf('recovery_token=') !== -1 ||
+          h.indexOf('confirmation_token=') !== -1;
+
+        if (hasToken) {
+          window.netlifyIdentity.open();
+        }
+      });
+
+      window.netlifyIdentity.init();
+    })();
+  </script>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

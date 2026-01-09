@@ -1,0 +1,36 @@
+{
+  "highlights": [
+    {
+      "key": "h1",
+      "week": "Week 0",
+      "month": "Nov",
+      "title": "Lantern Rite Hangout",
+      "sub": "Cosy social + photos",
+      "image": ""
+    },
+    {
+      "key": "h2",
+      "week": "Week 2",
+      "month": "Nov",
+      "title": "HSR Theorycraft Night",
+      "sub": "Builds + team comps",
+      "image": ""
+    },
+    {
+      "key": "h3",
+      "week": "Week 4",
+      "month": "Dec",
+      "title": "ZZZ Clips Showcase",
+      "sub": "Best moments compilation",
+      "image": ""
+    },
+    {
+      "key": "h4",
+      "week": "Week 6",
+      "month": "Dec",
+      "title": "Collab Night",
+      "sub": "Cross-game mini events",
+      "image": ""
+    }
+  ]
+}
