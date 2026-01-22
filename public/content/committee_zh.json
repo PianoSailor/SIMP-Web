@@ -1,0 +1,9 @@
+{
+  "members": [],
+  "signup": {
+    "title": "Join the committee",
+    "text": "Interested in helping run events and build the community? Apply here.",
+    "formUrl": "#",
+    "ctaLabel": "Apply"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "About SIMP UniMelb",
+  "text": "We are a student club at the University of Melbourne that connects Hoyoverse gamers across Genshin Impact, Honkai: Star Rail and Zenless Zone Zero.",
+  "image": "",
+  "contactTitle": "Contact",
+  "contact": {
+    "email": "simp.unimelb@example.com",
+    "hours": "Weekdays 9:00–17:00"
+  },
+  "feedback": {
+    "title": "Feedback",
+    "text": "Have ideas or suggestions? Let us know via the form.",
+    "formUrl": "#",
+    "ctaLabel": "Open form"
+  }
+}

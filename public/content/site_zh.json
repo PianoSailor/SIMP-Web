@@ -1,0 +1,63 @@
+{
+  "header": {
+    "clubName": "Student Institution of miHoYo Players",
+    "clubShort": "SIMP UniMelb",
+    "logoPrimary": "/images/logo1.png",
+    "logoSecondary": "/images/logo2.png",
+    "navLinks": [
+      {
+        "label": "主页",
+        "href": "/"
+      },
+      {
+        "label": "活动",
+        "href": "#events"
+      },
+      {
+        "label": "2026演出",
+        "href": "/performance-2026"
+      },
+      {
+        "label": "委员会",
+        "href": "/committee"
+      },
+      {
+        "label": "关于与联系",
+        "href": "/about"
+      }
+    ]
+  },
+  "hero": {
+    "kicker": "Student Institution of miHoYo Players · UniMelb",
+    "title": "Connecting Hoyoverse Gamers at UniMelb",
+    "subtitle": "Genshin Impact · Honkai: Star Rail · Zenless Zone Zero",
+    "primaryCta": {
+      "label": "查看活动",
+      "href": "#events"
+    },
+    "secondaryCta": {
+      "label": "加入与联系",
+      "href": "#explore"
+    }
+  },
+  "committee": {
+    "title": "Our Committee",
+    "subtitle": "Run by passionate Hoyoverse players. Hover to learn more."
+  },
+  "explore": {
+    "title": "Explore & Join",
+    "subtitle": "Find us on social media. Join for events, updates, and meetups."
+  },
+  "footer": {
+    "line1": "© 2026 Student Institution of miHoYo Players – University of Melbourne",
+    "line2": "Made with love for Hoyoverse games."
+  },
+  "language": {
+    "label": "Language",
+    "options": {
+      "en": "EN",
+      "zh": "简体中文",
+      "ja": "日本語"
+    }
+  }
+}
