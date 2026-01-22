@@ -2,8 +2,8 @@
   "header": {
     "clubName": "Student Institution of miHoYo Players",
     "clubShort": "SIMP UniMelb",
-    "logoPrimary": "/images/logo1.png",
-    "logoSecondary": "/images/logo2.png",
+    "logoPrimary": "/images/uploads/club-logo-linkedin.jpg",
+    "logoSecondary": "/images/uploads/umsu-clubs-affiliated-reversed-2.png",
     "navLinks": [
       {
         "label": "Home",
@@ -59,5 +59,9 @@
       "zh": "简体中文",
       "ja": "日本語"
     }
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Learn more for upcoming events."
   }
 }
