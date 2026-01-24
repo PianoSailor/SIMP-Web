@@ -387,7 +387,7 @@ html[data-theme="zzz"] { --accent: #ffcc4d; --accent2: #ff5aa5; --bg: #0c0c0f; }
   color: var(--text);
   text-decoration: none;
 }
-.slide { min-height: 220px; display: grid; grid-template-rows: 140px 1fr; }
+.slide { min-height: 220px; display: grid; grid-template-rows: 180px 1fr; }
 .slideMedia { height: 140px; }
 .slideMedia.a { background: radial-gradient(circle at 30% 20%, #fff, color-mix(in srgb, var(--accent) 55%, #111)); }
 .slideMedia.b { background: radial-gradient(circle at 30% 20%, #fff, color-mix(in srgb, var(--accent2) 55%, #111)); }
@@ -453,6 +453,7 @@ html[data-theme="zzz"] { --accent: #ffcc4d; --accent2: #ff5aa5; --bg: #0c0c0f; }
   padding: 14px;
   background: color-mix(in srgb, var(--bg) 74%, transparent);
   backdrop-filter: blur(14px);
+    border-radius: 22px;
   border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
   transform: translateY(10px);
   opacity: 0;
@@ -490,6 +491,7 @@ html[data-theme="zzz"] { --accent: #ffcc4d; --accent2: #ff5aa5; --bg: #0c0c0f; }
   .header { padding: 0 12px; }
   .brandSub { display: none; }
   .section { padding: 80px 16px; }
+  .sectionHead { flex-direction: column; align-items: flex-start; gap: 12px; }
   .committeeGrid { grid-template-columns: 1fr; }
   .memberCard.featured { grid-column: auto; }
 }
@@ -1023,13 +1025,13 @@ html[data-theme="zzz"] { --accent: #ffcc4d; --accent2: #ff5aa5; --bg: #0c0c0f; }
   padding: 8px 10px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(0,0,0,0.22);
+  background: var(--bg);
 }
 .langSelect {
   appearance: none;
   border: none;
   outline: none;
-  background: transparent;
+  background: var(--bg);
   color: inherit;
   font: inherit;
   cursor: pointer;
@@ -1082,6 +1084,10 @@ html[data-theme="zzz"] { --accent: #ffcc4d; --accent2: #ff5aa5; --bg: #0c0c0f; }
   padding: 14px;
   background: rgba(0,0,0,0.18);
 }
+.pageBlock.feedback {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+}
 .blockTitle { font-weight: 700; margin-bottom: 8px; }
 
 @media (max-width: 900px) {
@@ -1094,14 +1100,16 @@ html[data-theme="zzz"] { --accent: #ffcc4d; --accent2: #ff5aa5; --bg: #0c0c0f; }
 ----------------------- */
 .performancePromo .perfCard {
   display: grid;
-  grid-template-columns: 96px 1fr auto;
+  grid-template-columns: 1fr auto auto;
   gap: 14px;
   align-items: center;
   padding: 14px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(0,0,0,0.18);
-  cursor: pointer;
+}
+.performancePromo .perfCard:not(:has(.perfBanner)) {
+  grid-template-columns: 1fr auto;
 }
 .perfBanner {
   width: 96px;

@@ -35,9 +35,11 @@ export default function About({ lang = 'en' }) {
               <div className="muted">{data?.contact?.hours || FALLBACK.contact.hours}</div>
             </div>
 
-            <div className="pageBlock">
-              <div className="blockTitle">{data?.feedback?.title || FALLBACK.feedback.title}</div>
-              <div className="muted">{data?.feedback?.text || FALLBACK.feedback.text}</div>
+            <div className="pageBlock feedback">
+              <div>
+                <div className="blockTitle">{data?.feedback?.title || FALLBACK.feedback.title}</div>
+                <div className="muted">{data?.feedback?.text || FALLBACK.feedback.text}</div>
+              </div>
               <a
                 className="btn primary"
                 href={data?.feedback?.formUrl || '#'}

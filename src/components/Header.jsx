@@ -116,7 +116,7 @@ export default function Header({ theme, setTheme, themeLabel, lang = 'en', setLa
         </div>
 
         <div className="themeChip" title="Theme">
-          <span className="themeLabel">{themeLabel}</span>
+          <span className="themeLabel">Theme</span>
           <div className="themeBtns">
             <button className={`themeBtn ${theme === 'genshin' ? 'active' : ''}`} onClick={() => setTheme('genshin')}>
               GI

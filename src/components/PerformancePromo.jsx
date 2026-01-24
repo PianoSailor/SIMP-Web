@@ -18,7 +18,7 @@ export default function PerformancePromo({ lang = 'en' }) {
 
   return (
     <section className="section performancePromo" aria-label="Performance signup">
-      <div className="perfCard" role="button" tabIndex={0} onClick={() => navigate(data.pagePath || '/performance-2026')}>
+      <div className="perfCard">
         {data.banner ? <img className="perfBanner" src={data.banner} alt="" /> : null}
         <div className="perfBody">
           <div className="perfTitle">{data.title || FALLBACK.title}</div>
