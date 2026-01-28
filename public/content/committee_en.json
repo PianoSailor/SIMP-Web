@@ -1,5 +1,22 @@
 {
-  "members": [],
+  "members": [
+    {
+      "name": "Roger Cao",
+      "role": "President",
+      "favGame": "Honkai: Star Rail",
+      "slogan": "Let’s make this year unforgettable together."
+    },
+    {
+      "name": "Vice President",
+      "role": "Vice President",
+      "slogan": "Supporting the team and pushing forward.",
+      "favGame": "Genshin Impact"
+    },
+    {
+      "name": "Secretary",
+      "role": "Secretary"
+    }
+  ],
   "signup": {
     "title": "Join the committee",
     "text": "Interested in helping run events and build the community? Apply here.",
