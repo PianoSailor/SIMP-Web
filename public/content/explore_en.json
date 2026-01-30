@@ -1,0 +1,29 @@
+{
+  "links": [
+    {
+      "title": "UMSU page",
+      "desc": "Official page to join",
+      "hint": "Join Club",
+      "url": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10374/"
+    },
+    {
+      "title": "Discord",
+      "desc": "Daily chats and livestreams",
+      "hint": "Join Server",
+      "url": "https://discord.gg/3kUmXWGd"
+    },
+    {
+      "title": "Instagram",
+      "desc": "Photos + updates in English",
+      "hint": "Follow",
+      "url": "https://www.instagram.com/unimelb.simp/"
+    },
+    {
+      "title": "RedNote",
+      "desc": "Photos + updates in Chinese",
+      "hint": "Follow",
+      "url": "https://www.xiaohongshu.com/user/profile/65a070bf00000000220009c0"
+    }
+  ],
+  "instagramEmbedUrl": ""
+}
