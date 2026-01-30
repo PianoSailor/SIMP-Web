@@ -1,0 +1,30 @@
+{
+  "links": [
+    {
+      "title": "UMSU页面",
+      "desc": "学校官网",
+      "hint": "加入社团",
+      "url": "https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/10374/"
+    },
+    {
+      "title": "Discord",
+      "desc": "日常聊天和直播",
+      "hint": "加入服务器",
+      "url": "https://discord.gg/3kUmXWGd"
+    },
+    {
+      "title": "Instagram",
+      "desc": "英文版照片和更新",
+      "hint": "关注",
+      "url": "https://www.instagram.com/unimelb.simp/"
+    },
+    {
+      "title": "小红书",
+      "desc": "中文版照片和更新",
+      "hint": "关注",
+      "url": "https://www.xiaohongshu.com/user/profile/65a070bf00000000220009c0"
+    }
+  ],
+  "instagramEmbedUrl": "",
+  "instagramUsername": "unimelb.simp"
+}

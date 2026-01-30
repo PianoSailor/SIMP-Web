@@ -1,0 +1,605 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: content_en
+    label: Content (EN)
+    files:
+      - file: "public/content/site_en.json"
+        label: Site (EN)
+        name: site_en
+        format: json
+        fields:
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Club Name, name: clubName, widget: string }
+              - { label: Club Short, name: clubShort, widget: string, required: false }
+              - { label: Brand Subtitle, name: brandSub, widget: string, required: false }
+              - { label: Primary Logo, name: logoPrimary, widget: image, required: false }
+              - { label: Secondary Logo, name: logoSecondary, widget: image, required: false }
+              - label: Nav Links
+                name: navLinks
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Kicker, name: kicker, widget: string, required: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - label: Primary CTA
+                name: primaryCta
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+              - label: Secondary CTA
+                name: secondaryCta
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+          - label: Events Section
+            name: events
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - { label: Event Calendar, name: eventCalendar, widget: string }
+              - { label: Month Grid Hint, name: monthGridHint, widget: string, required: false }
+              - { label: Today Button Label, name: today, widget: string }
+              - { label: Previous Month Label, name: previousMonth, widget: string }
+              - { label: Next Month Label, name: nextMonth, widget: string }
+              - { label: Week Labels Hint, name: weekLabelsHint, widget: string, required: false }
+              - { label: Selected Date Label, name: selectedDate, widget: string }
+              - { label: No Events Message, name: noEvents, widget: string }
+              - { label: Click Highlighted Day Message, name: clickHighlightedDay, widget: string, required: false }
+              - { label: View Full Calendar Button, name: viewFullCalendar, widget: string }
+              - { label: Suggest Event Button, name: suggestEvent, widget: string }
+              - { label: Past Highlights Title, name: pastHighlights, widget: string }
+              - { label: Carousel Hint, name: carouselHint, widget: string, required: false }
+          - label: Committee Section
+            name: committee
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Explore Section
+            name: explore
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Line 1, name: line1, widget: string }
+              - { label: Line 2, name: line2, widget: string, required: false }
+          - label: Language UI
+            name: language
+            widget: object
+            fields:
+              - { label: Label, name: label, widget: string, required: false }
+              - label: Options
+                name: options
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, required: false }
+                  - { label: Simplified Chinese, name: zh, widget: string, required: false }
+                  - { label: Japanese, name: ja, widget: string, required: false }
+
+      - file: "public/content/explore_en.json"
+        label: Explore Links (EN)
+        name: explore_en
+        format: json
+        fields:
+          - { label: Instagram Embed URL (optional), name: instagramEmbedUrl, widget: string, required: false }
+          - { label: Instagram Username (for latest fetch), name: instagramUsername, widget: string, required: false }
+          - label: Links
+            name: links
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: desc, widget: string, required: false }
+              - { label: Hint, name: hint, widget: string, required: false }
+              - { label: URL, name: url, widget: string }
+
+      - file: "public/content/events_en.json"
+        label: Events (EN)
+        name: events_en
+        format: json
+        fields:
+          - label: Events
+            name: events
+            widget: list
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: ID, name: id, widget: string, required: false }
+              - { label: Slug (for event page URL), name: slug, widget: string, required: false }
+              - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Tag, name: tag, widget: string, required: false }
+              - { label: Location, name: location, widget: string, required: false }
+              - { label: Description, name: desc, widget: text, required: false }
+              - { label: Cover Image, name: image, widget: image, required: false }
+              - { label: Recap (for event page), name: recap, widget: text, required: false }
+              - { label: Event Details (for event detail page), name: details, widget: text, required: false }
+              - label: Social Post Links
+                name: socialLinks
+                widget: list
+                required: false
+                fields:
+                  - { label: Label (optional), name: label, widget: string, required: false }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery Images
+                name: gallery
+                widget: list
+                required: false
+                field: { label: Image, name: image, widget: image }
+
+      - file: "public/content/committee_en.json"
+        label: Committee (EN)
+        name: committee_en
+        format: json
+        fields:
+          - label: Members
+            name: members
+            widget: list
+            summary: "{{fields.role}} — {{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Slogan, name: slogan, widget: string, required: false }
+              - { label: Favourite Game, name: favGame, widget: string, required: false }
+              - { label: Bio, name: bio, widget: text, required: false }
+              - { label: Photo, name: photo, widget: image, required: false }
+              - { label: Contact URL (optional), name: contactUrl, widget: string, required: false }
+              - { label: Apply URL (optional), name: applyUrl, widget: string, required: false }
+              - { label: Hover Message (legacy home card), name: msg, widget: text, required: false }
+              - { label: Favourite Game / Tag (legacy home card), name: fav, widget: string, required: false }
+          - label: Committee Signup
+            name: signup
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Text, name: text, widget: string, required: false }
+              - { label: Google Form URL, name: formUrl, widget: string, required: false }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+
+      - file: "public/content/performance_en.json"
+        label: Performance 2026 (EN)
+        name: performance_en
+        format: json
+        fields:
+          - { label: Featured on Home, name: featured, widget: boolean, required: false }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle (home highlight), name: subtitle, widget: string, required: false }
+          - { label: Text (page body), name: text, widget: text, required: false }
+          - { label: Banner Image, name: banner, widget: image, required: false }
+          - { label: Signup Form URL, name: formUrl, widget: string, required: false }
+          - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+          - { label: Page Path, name: pagePath, widget: string, required: false }
+
+      - file: "public/content/about_en.json"
+        label: About & Contact (EN)
+        name: about_en
+        format: json
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Text, name: text, widget: text, required: false }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Contact Section Title, name: contactTitle, widget: string, required: false }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: Email (display only), name: email, widget: string, required: false }
+              - { label: Working Time, name: hours, widget: string, required: false }
+          - label: Feedback
+            name: feedback
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Text, name: text, widget: text, required: false }
+              - { label: Google Form URL, name: formUrl, widget: string, required: false }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+
+  - name: content_zh
+    label: Content (简体中文)
+    files:
+      - file: "public/content/site_zh.json"
+        label: Site (ZH)
+        name: site_zh
+        format: json
+        fields:
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Club Name, name: clubName, widget: string }
+              - { label: Brand Subtitle, name: brandSub, widget: string, required: false }
+              - { label: Primary Logo, name: logoPrimary, widget: image, required: false }
+              - { label: Secondary Logo, name: logoSecondary, widget: image, required: false }
+              - label: Nav Links
+                name: navLinks
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Kicker, name: kicker, widget: string, required: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - label: Primary CTA
+                name: primaryCta
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+              - label: Secondary CTA
+                name: secondaryCta
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+          - label: Events Section
+            name: events
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Committee Section
+            name: committee
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Explore Section
+            name: explore
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Line 1, name: line1, widget: string }
+              - { label: Line 2, name: line2, widget: string, required: false }
+          - label: Language UI
+            name: language
+            widget: object
+            fields:
+              - { label: Label, name: label, widget: string, required: false }
+              - label: Options
+                name: options
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, required: false }
+                  - { label: Simplified Chinese, name: zh, widget: string, required: false }
+                  - { label: Japanese, name: ja, widget: string, required: false }
+
+      - file: "public/content/explore_zh.json"
+        label: Explore Links (ZH)
+        name: explore_zh
+        format: json
+        fields:
+          - { label: Instagram Embed URL (optional), name: instagramEmbedUrl, widget: string, required: false }
+          - { label: Instagram Username (for latest fetch), name: instagramUsername, widget: string, required: false }
+          - label: Links
+            name: links
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: desc, widget: string, required: false }
+              - { label: Hint, name: hint, widget: string, required: false }
+              - { label: URL, name: url, widget: string }
+
+      - file: "public/content/events_zh.json"
+        label: Events (ZH)
+        name: events_zh
+        format: json
+        fields:
+          - label: Events
+            name: events
+            widget: list
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: ID, name: id, widget: string, required: false }
+              - { label: Slug, name: slug, widget: string, required: false }
+              - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Tag, name: tag, widget: string, required: false }
+              - { label: Location, name: location, widget: string, required: false }
+              - { label: Description, name: desc, widget: text, required: false }
+              - { label: Cover Image, name: image, widget: image, required: false }
+              - { label: Recap, name: recap, widget: text, required: false }
+              - { label: Event Details (for event detail page), name: details, widget: text, required: false }
+              - label: Social Post Links
+                name: socialLinks
+                widget: list
+                required: false
+                fields:
+                  - { label: Label (optional), name: label, widget: string, required: false }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery Images
+                name: gallery
+                widget: list
+                required: false
+                field: { label: Image, name: image, widget: image }
+
+      - file: "public/content/committee_zh.json"
+        label: Committee (ZH)
+        name: committee_zh
+        format: json
+        fields:
+          - label: Members
+            name: members
+            widget: list
+            summary: "{{fields.role}} — {{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Slogan, name: slogan, widget: string, required: false }
+              - { label: Favourite Game, name: favGame, widget: string, required: false }
+              - { label: Bio, name: bio, widget: text, required: false }
+              - { label: Photo, name: photo, widget: image, required: false }
+              - { label: Contact URL, name: contactUrl, widget: string, required: false }
+              - { label: Apply URL, name: applyUrl, widget: string, required: false }
+              - { label: Hover Message (legacy), name: msg, widget: text, required: false }
+              - { label: Favourite Game / Tag (legacy), name: fav, widget: string, required: false }
+          - label: Committee Signup
+            name: signup
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Text, name: text, widget: string, required: false }
+              - { label: Google Form URL, name: formUrl, widget: string, required: false }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+
+      - file: "public/content/performance_zh.json"
+        label: Performance 2026 (ZH)
+        name: performance_zh
+        format: json
+        fields:
+          - { label: Featured on Home, name: featured, widget: boolean, required: false }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - { label: Text, name: text, widget: text, required: false }
+          - { label: Banner Image, name: banner, widget: image, required: false }
+          - { label: Signup Form URL, name: formUrl, widget: string, required: false }
+          - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+          - { label: Page Path, name: pagePath, widget: string, required: false }
+
+      - file: "public/content/about_zh.json"
+        label: About & Contact (ZH)
+        name: about_zh
+        format: json
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Text, name: text, widget: text, required: false }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Contact Section Title, name: contactTitle, widget: string, required: false }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: Email (display only), name: email, widget: string, required: false }
+              - { label: Working Time, name: hours, widget: string, required: false }
+          - label: Feedback
+            name: feedback
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Text, name: text, widget: text, required: false }
+              - { label: Google Form URL, name: formUrl, widget: string, required: false }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+
+  - name: content_ja
+    label: Content (日本語)
+    files:
+      - file: "public/content/site_ja.json"
+        label: Site (JA)
+        name: site_ja
+        format: json
+        fields:
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Club Name, name: clubName, widget: string }
+              - { label: Brand Subtitle, name: brandSub, widget: string, required: false }
+              - { label: Primary Logo, name: logoPrimary, widget: image, required: false }
+              - { label: Secondary Logo, name: logoSecondary, widget: image, required: false }
+              - label: Nav Links
+                name: navLinks
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Kicker, name: kicker, widget: string, required: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - label: Primary CTA
+                name: primaryCta
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+              - label: Secondary CTA
+                name: secondaryCta
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Target, name: href, widget: string }
+          - label: Events Section
+            name: events
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Committee Section
+            name: committee
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Explore Section
+            name: explore
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Line 1, name: line1, widget: string }
+              - { label: Line 2, name: line2, widget: string, required: false }
+          - label: Language UI
+            name: language
+            widget: object
+            fields:
+              - { label: Label, name: label, widget: string, required: false }
+              - label: Options
+                name: options
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, required: false }
+                  - { label: Simplified Chinese, name: zh, widget: string, required: false }
+                  - { label: Japanese, name: ja, widget: string, required: false }
+
+      - file: "public/content/explore_ja.json"
+        label: Explore Links (JA)
+        name: explore_ja
+        format: json
+        fields:
+          - { label: Instagram Embed URL (optional), name: instagramEmbedUrl, widget: string, required: false }
+          - { label: Instagram Username (for latest fetch), name: instagramUsername, widget: string, required: false }
+          - label: Links
+            name: links
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: desc, widget: string, required: false }
+              - { label: Hint, name: hint, widget: string, required: false }
+              - { label: URL, name: url, widget: string }
+
+      - file: "public/content/events_ja.json"
+        label: Events (JA)
+        name: events_ja
+        format: json
+        fields:
+          - label: Events
+            name: events
+            widget: list
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: ID, name: id, widget: string, required: false }
+              - { label: Slug, name: slug, widget: string, required: false }
+              - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Tag, name: tag, widget: string, required: false }
+              - { label: Location, name: location, widget: string, required: false }
+              - { label: Description, name: desc, widget: text, required: false }
+              - { label: Cover Image, name: image, widget: image, required: false }
+              - { label: Recap, name: recap, widget: text, required: false }
+              - { label: Event Details (for event detail page), name: details, widget: text, required: false }
+              - label: Social Post Links
+                name: socialLinks
+                widget: list
+                required: false
+                fields:
+                  - { label: Label (optional), name: label, widget: string, required: false }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery Images
+                name: gallery
+                widget: list
+                required: false
+                field: { label: Image, name: image, widget: image }
+
+      - file: "public/content/committee_ja.json"
+        label: Committee (JA)
+        name: committee_ja
+        format: json
+        fields:
+          - label: Members
+            name: members
+            widget: list
+            summary: "{{fields.role}} — {{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Slogan, name: slogan, widget: string, required: false }
+              - { label: Favourite Game, name: favGame, widget: string, required: false }
+              - { label: Bio, name: bio, widget: text, required: false }
+              - { label: Photo, name: photo, widget: image, required: false }
+              - { label: Contact URL, name: contactUrl, widget: string, required: false }
+              - { label: Apply URL, name: applyUrl, widget: string, required: false }
+              - { label: Hover Message (legacy), name: msg, widget: text, required: false }
+              - { label: Favourite Game / Tag (legacy), name: fav, widget: string, required: false }
+          - label: Committee Signup
+            name: signup
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Text, name: text, widget: string, required: false }
+              - { label: Google Form URL, name: formUrl, widget: string, required: false }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+
+      - file: "public/content/performance_ja.json"
+        label: Performance 2026 (JA)
+        name: performance_ja
+        format: json
+        fields:
+          - { label: Featured on Home, name: featured, widget: boolean, required: false }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - { label: Text, name: text, widget: text, required: false }
+          - { label: Banner Image, name: banner, widget: image, required: false }
+          - { label: Signup Form URL, name: formUrl, widget: string, required: false }
+          - { label: CTA Label, name: ctaLabel, widget: string, required: false }
+          - { label: Page Path, name: pagePath, widget: string, required: false }
+
+      - file: "public/content/about_ja.json"
+        label: About & Contact (JA)
+        name: about_ja
+        format: json
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Text, name: text, widget: text, required: false }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Contact Section Title, name: contactTitle, widget: string, required: false }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: Email (display only), name: email, widget: string, required: false }
+              - { label: Working Time, name: hours, widget: string, required: false }
+          - label: Feedback
+            name: feedback
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Text, name: text, widget: text, required: false }
+              - { label: Google Form URL, name: formUrl, widget: string, required: false }
+              - { label: CTA Label, name: ctaLabel, widget: string, required: false }

@@ -1,0 +1,30 @@
+{
+  "links": [
+    {
+      "title": "Discord",
+      "desc": "Events, LFG, announcements",
+      "hint": "Join our server",
+      "url": "#"
+    },
+    {
+      "title": "Instagram",
+      "desc": "Photos + updates",
+      "hint": "@simp_unimelb",
+      "url": "#"
+    },
+    {
+      "title": "Reddit",
+      "desc": "Discussion threads",
+      "hint": "Community hub",
+      "url": "#"
+    },
+    {
+      "title": "Bilibili",
+      "desc": "Clips and highlights",
+      "hint": "Media archive",
+      "url": "#"
+    }
+  ],
+  "instagramEmbedUrl": "",
+  "instagramUsername": "unimelb.simp"
+}
