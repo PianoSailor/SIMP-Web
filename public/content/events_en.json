@@ -1,0 +1,14 @@
+{
+  "events": [
+    {
+      "id": "000",
+      "slug": "winterfest-2025",
+      "date": "2025-07-24",
+      "title": "Winterfest 2025",
+      "location": "Market Hall (Building 189)",
+      "details": "details for events",
+      "desc": "a event",
+      "recap": "this is the recap"
+    }
+  ]
+}
