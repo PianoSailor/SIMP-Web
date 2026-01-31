@@ -1,13 +1,20 @@
 {
   "events": [
     {
-      "id": "000",
+      "details": "details for events",
       "slug": "winterfest-2025",
       "date": "2025-07-24",
-      "title": "Winterfest 2025",
-      "location": "Market Hall (Building 189)",
-      "details": "details for events",
       "desc": "a event",
+      "gallery": [
+        "/images/uploads/image_20260131215250.jpg",
+        "/images/uploads/image_20260131215243.jpg",
+        "/images/uploads/image_20260131215227.jpg",
+        "/images/uploads/image_20260131215207.jpg",
+        "/images/uploads/image_20260131215237.jpg"
+      ],
+      "location": "Market Hall (Building 189)",
+      "title": "Winterfest 2025",
+      "id": "000",
       "recap": "this is the recap"
     }
   ]
