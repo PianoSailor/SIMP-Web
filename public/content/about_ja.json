@@ -1,0 +1,16 @@
+{
+  "title": "SIMP UniMelb について",
+  "text": "私たちはメルボルン大学の学生クラブで、『原神』『崩壊：スターレイル』『ゼンレスゾーンゼロ』などのHoYoverseゲームを通じて、学内のプレイヤー同士をつなげています。",
+  "image": "",
+  "contactTitle": "連絡先",
+  "contact": {
+    "email": "simp.unimelb@example.com",
+    "hours": "Weekdays 9:00–17:00"
+  },
+  "feedback": {
+    "title": "フィードバック",
+    "text": "アイデアや提案があれば、フォームからぜひ教えてください。",
+    "formUrl": "https://forms.gle/YVvhLbLGycTwHnrq6",
+    "ctaLabel": "フォームを開く"
+  }
+}

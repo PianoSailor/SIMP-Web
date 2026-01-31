@@ -1,0 +1,84 @@
+{
+  "header": {
+    "clubName": "米哈游玩家学生协会SIMP",
+    "clubShort": "SIMP UniMelb",
+    "logoPrimary": "/images/uploads/club-logo-linkedin.jpg",
+    "logoSecondary": "/images/uploads/umsu-clubs-affiliated-reversed-2.png",
+    "navLinks": [
+      {
+        "label": "主页",
+        "href": "/"
+      },
+      {
+        "label": "活动",
+        "href": "#events"
+      },
+      {
+        "label": "2026演出",
+        "href": "/performance-2026"
+      },
+      {
+        "label": "委员会",
+        "href": "/committee"
+      },
+      {
+        "label": "关于与联系",
+        "href": "/about"
+      }
+    ]
+  },
+  "hero": {
+    "kicker": "米哈游玩家学生协会 · 墨尔本大学",
+    "title": "连接墨尔本大学的米哈游玩家",
+    "subtitle": "《原神》 · 《崩坏：星穹铁道》 · 《绝区零》",
+    "primaryCta": {
+      "label": "查看活动",
+      "href": "#events"
+    },
+    "secondaryCta": {
+      "label": "加入与联系",
+      "href": "#explore"
+    }
+  },
+  "committee": {
+    "title": "我们的委员会",
+    "subtitle": "由热爱米哈游游戏的玩家运营。悬停以了解更多。"
+  },
+  "explore": {
+    "title": "探索与加入",
+    "subtitle": "在社交媒体上找到我们。加入以参与活动、获取更新和参加聚会。"
+  },
+  "footer": {
+    "line1": "© 2026 米哈游玩家学生协会 – 墨尔本大学",
+    "line2": "为热爱米哈游游戏而制作。"
+  },
+  "language": {
+    "label": "语言",
+    "options": {
+      "en": "EN",
+      "zh": "简体中文",
+      "ja": "日本語"
+    }
+  },
+  "events": {
+    "today": "今天",
+    "carouselHint": "自动滚动（悬停/触摸暂停）。无缝循环。",
+    "selectedDate": "选定日期",
+    "previousMonth": "上个月",
+    "monthGridHint": "月份网格 + 可点击日期 + 活动卡片。",
+    "nextMonth": "下个月",
+    "clickHighlightedDay": "点击高亮日期以查看活动详情。",
+    "pastHighlights": "过去学期亮点",
+    "viewFullCalendar": "查看完整学期日历",
+    "suggestEvent": "建议活动",
+    "subtitle": "了解即将举行的活动详情。",
+    "title": "活动",
+    "eventCalendar": "活动日历",
+    "weekLabelsHint": "周标签遵循墨尔本大学 2026 教学周期",
+    "noEvents": "该日期没有活动。"
+  },
+  "instagramEmbed": {
+    "embedUrl": "",
+    "username": "unimelb.simp"
+  }
+}

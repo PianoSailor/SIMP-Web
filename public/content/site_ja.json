@@ -1,0 +1,84 @@
+{
+  "header": {
+    "clubName": "Student Institution of miHoYo Players",
+    "clubShort": "SIMP UniMelb",
+    "logoPrimary": "/images/uploads/club-logo-linkedin.jpg",
+    "logoSecondary": "/images/uploads/umsu-clubs-affiliated-reversed-2.png",
+    "navLinks": [
+      {
+        "label": "ホーム",
+        "href": "/"
+      },
+      {
+        "label": "イベント",
+        "href": "#events"
+      },
+      {
+        "label": "2026公演",
+        "href": "/performance-2026"
+      },
+      {
+        "label": "委員会",
+        "href": "/committee"
+      },
+      {
+        "label": "概要・お問い合わせ",
+        "href": "/about"
+      }
+    ]
+  },
+  "hero": {
+    "kicker": "miHoYoプレイヤー学生協会 · メルボルン大学",
+    "title": "UniMelbのHoYoverseゲーマーをつなぐ",
+    "subtitle": "『原神』 · 『崩壊：スターレイル』 · 『ゼンレスゾーンゼロ』",
+    "primaryCta": {
+      "label": "イベントを見る",
+      "href": "#events"
+    },
+    "secondaryCta": {
+      "label": "参加・連絡",
+      "href": "#explore"
+    }
+  },
+  "committee": {
+    "title": "委員会メンバー",
+    "subtitle": "HoYoverseが大好きなメンバーで運営しています。ホバーで詳しく表示。"
+  },
+  "explore": {
+    "title": "参加・リンク",
+    "subtitle": "SNSでつながろう。イベント情報・お知らせ・交流の場を提供します。"
+  },
+  "footer": {
+    "line1": "© 2026 Student Institution of miHoYo Players – University of Melbourne",
+    "line2": "HoYoverse作品への愛で作りました。"
+  },
+  "language": {
+    "label": "言語",
+    "options": {
+      "en": "EN",
+      "zh": "简体中文",
+      "ja": "日本語"
+    }
+  },
+  "events": {
+    "title": "イベント",
+    "subtitle": "開催予定のイベントをチェックしてください。",
+    "eventCalendar": "イベントカレンダー",
+    "monthGridHint": "月表示グリッド + クリック可能な日付 + イベントカード。",
+    "today": "今日",
+    "previousMonth": "前の月",
+    "nextMonth": "次の月",
+    "weekLabelsHint": "週ラベルはUniMelbの2026年授業期間に準拠",
+    "selectedDate": "選択した日付",
+    "noEvents": "この日にイベントはありません。",
+    "clickHighlightedDay": "ハイライトされた日付をクリックして詳細を表示。",
+    "viewFullCalendar": "学期カレンダーを表示",
+    "suggestEvent": "イベントを提案",
+    "pastHighlights": "過去学期のハイライト",
+    "carouselHint": "自動スクロール（ホバー/タッチで一時停止）。シームレスループ。"
+  },
+  "instagramEmbed": {
+    "embedUrl": "",
+    "username": "unimelb.simp"
+  }
+}

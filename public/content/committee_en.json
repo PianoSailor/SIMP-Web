@@ -1,0 +1,47 @@
+{
+  "members": [
+  {
+    "name": "President",
+    "role": "Leadership · Partnerships",
+    "fav": "Genshin Impact",
+    "msg": "Keeping the club passionate and active."
+  },
+  {
+    "name": "Vice President",
+    "role": "Operations · Events",
+    "fav": "Honkai: Star Rail",
+    "msg": "Turning ideas into real gatherings."
+  },
+  {
+    "name": "Secretary",
+    "role": "Administration · Communications",
+    "fav": "Zenless Zone Zero",
+    "msg": "Keeping everything organised and clear."
+  },
+  {
+    "name": "Treasurer",
+    "role": "Budget · Sponsorship",
+    "fav": "Genshin Impact",
+    "msg": "Funding the fun responsibly."
+  },
+  {
+    "name": "Events Lead",
+    "role": "Event Organisation",
+    "fav": "Honkai: Star Rail",
+    "msg": "Game nights, collaborations, and more."
+  },
+  {
+    "name": "Media Lead",
+    "role": "Design · Social Media",
+    "fav": "Zenless Zone Zero",
+    "msg": "Making the club look and feel as cool as it is."
+  }
+]
+,
+  "signup": {
+    "title": "Join the committee",
+    "text": "Interested in helping run events and build the community? Apply here.",
+    "formUrl": "#",
+    "ctaLabel": "Apply"
+  }
+}
