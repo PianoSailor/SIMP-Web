@@ -14,7 +14,7 @@
         "href": "#events"
       },
       {
-        "label": "2026演出",
+        "label": "音乐会",
         "href": "/performance-2026"
       },
       {
@@ -22,7 +22,7 @@
         "href": "/committee"
       },
       {
-        "label": "关于与联系",
+        "label": "关于我们",
         "href": "/about"
       }
     ]
@@ -36,7 +36,7 @@
       "href": "#events"
     },
     "secondaryCta": {
-      "label": "加入与联系",
+      "label": "加入我们",
       "href": "#explore"
     }
   },
