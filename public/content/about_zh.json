@@ -1,16 +1,16 @@
 {
   "title": "关于 SIMP UniMelb",
   "text": "我们是墨尔本大学的一个学生俱乐部，连接了《原神》、《崩坏：星穹铁道》和《绝区零》的玩家。",
-  "image": "",
+  "image": "/images/uploads/club-logo-linkedin.jpg",
   "contactTitle": "联系方式",
   "contact": {
-    "email": "simp.unimelb@example.com",
-    "hours": "工作日 9:00–17:00"
+    "email": "邮箱：simp.unimelb@example.com",
+    "hours": "工作时间：工作日 9:00–17:00"
   },
   "feedback": {
     "title": "反馈",
-    "text": "有想法或建议吗？通过表单告诉我们。",
+    "text": "有想法或者建议？用问卷告诉我们吧~",
     "formUrl": "https://forms.gle/J4wCZTxDwzRQfXAEA",
-    "ctaLabel": "打开表单"
+    "ctaLabel": "填写问卷"
   }
 }
