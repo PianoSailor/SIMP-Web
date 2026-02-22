@@ -3,6 +3,12 @@
     {
       "details": "details for events",
       "slug": "winterfest-2025",
+      "socialLinks": [
+        {
+          "label": "instagram",
+          "url": "https://www.instagram.com/p/DMqz4TTBcZk/?img_index=1"
+        }
+      ],
       "date": "2025-07-24",
       "desc": "a event",
       "gallery": [
@@ -15,7 +21,26 @@
       "location": "Market Hall (Building 189)",
       "title": "Winterfest 2025",
       "id": "000",
-      "recap": "this is the recap"
+      "recap": "Thank you everyone who came by our stand at Winterfest and supported SIMP! It was great to see so many new faces and people interested in our club - in fact, we have gained over 100+ member just from this one event!\n\nWe hope to see you all at future events! May our love and passion for hoyoverse games bring us together and serve as a platform for building new friendships~\n\nAd Astra Academique!"
+    },
+    {
+      "slug": "welcome-party-25S2",
+      "socialLinks": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/p/DMtt78aBHzf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        }
+      ],
+      "date": "2025-08-01",
+      "desc": "SIMP is hosting our first social event! We are inviting all of you to come attend our welcome party, for an evening of games, trivia and lots more! Meet our committee and others in our community, compete in teams for prizes, and start your uni semester with a blast!\n\nDate: Friday 1st August\nTime: 5:00pm to 7:00pm\nLocation: Room 102, Alan Gilbert Building",
+      "gallery": [
+        "/images/uploads/525261553_17860174815453391_5434559213015145262_n-1-.jpg"
+      ],
+      "location": "Room 102, Alan Gilbert Building",
+      "title": "Welcome Party 25S2",
+      "id": "001",
+      "image": "/images/uploads/525261553_17860174815453391_5434559213015145262_n-1-.jpg",
+      "recap": "Thank you to everyone who came to our welcome party! It was amazing meeting so many of you - there was around 100 of us that day, getting to know each other and playing fun games together! We hope to see all of you at our future events!"
     }
   ]
 }
