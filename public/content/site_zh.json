@@ -2,6 +2,7 @@
   "header": {
     "clubName": "米哈游玩家学生协会SIMP",
     "clubShort": "SIMP UniMelb",
+    "brandSub": "UniMelb · 原神 · 星穹铁道 · 绝区零",
     "logoPrimary": "/images/uploads/club-logo-linkedin.jpg",
     "logoSecondary": "/images/uploads/umsu-clubs-affiliated-reversed-2.png",
     "navLinks": [
@@ -42,7 +43,11 @@
   },
   "committee": {
     "title": "我们的委员会",
-    "subtitle": "由热爱米哈游游戏的玩家运营。悬停以了解更多。"
+    "subtitle": "由热爱米哈游游戏的玩家运营。悬停以了解更多。",
+    "hoverProfile": "悬停查看资料",
+    "contact": "联系",
+    "apply": "申请",
+    "favPrefix": "主玩："
   },
   "explore": {
     "title": "探索与加入",
@@ -61,20 +66,33 @@
     }
   },
   "events": {
-    "today": "今天",
-    "carouselHint": "自动滚动（悬停/触摸暂停）。无缝循环。",
-    "selectedDate": "选定日期",
-    "previousMonth": "上个月",
+    "title": "活动",
+    "subtitle": "了解即将举行的活动详情。",
+    "eventCalendar": "活动日历",
     "monthGridHint": "月份网格 + 可点击日期 + 活动卡片。",
+    "today": "今天",
+    "previousMonth": "上个月",
     "nextMonth": "下个月",
+    "weekLabelsHint": "周标签遵循墨尔本大学 2026 教学周期",
+    "selectedDate": "选定日期",
+    "noEvents": "该日期没有活动。",
     "clickHighlightedDay": "点击高亮日期以查看活动详情。",
-    "pastHighlights": "过去学期亮点",
     "viewFullCalendar": "查看完整学期日历",
     "suggestEvent": "建议活动",
-    "subtitle": "了解即将举行的活动详情。",
-    "title": "活动",
-    "eventCalendar": "活动日历",
-    "weekLabelsHint": "周标签遵循墨尔本大学 2026 教学周期",
-    "noEvents": "该日期没有活动。"
+    "pastHighlights": "过去学期亮点",
+    "carouselHint": "自动滚动（悬停/触摸暂停）。无缝循环。",
+    "weekdays": {
+      "sun": "周日",
+      "mon": "周一",
+      "tue": "周二",
+      "wed": "周三",
+      "thu": "周四",
+      "fri": "周五",
+      "sat": "周六"
+    },
+    "legendOWeek": "迎新周",
+    "legendBreak": "期中假期",
+    "legendSwot": "复习周",
+    "legendTeachingWeeks": "教学周（标签显示在周一）"
   }
 }

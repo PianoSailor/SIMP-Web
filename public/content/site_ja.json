@@ -2,8 +2,8 @@
   "header": {
     "clubName": "Student Institution of miHoYo Players",
     "clubShort": "SIMP UniMelb",
-    "logoPrimary": "/images/uploads/club-logo-linkedin.jpg",
-    "logoSecondary": "/images/uploads/umsu-clubs-affiliated-reversed-2.png",
+    "logoPrimary": "/images/logo1.png",
+    "logoSecondary": "/images/logo2.png",
     "navLinks": [
       {
         "label": "ホーム",
@@ -22,15 +22,15 @@
         "href": "/committee"
       },
       {
-        "label": "概要・お問い合わせ",
+        "label": "About / Contact",
         "href": "/about"
       }
     ]
   },
   "hero": {
-    "kicker": "miHoYoプレイヤー学生協会 · メルボルン大学",
-    "title": "UniMelbのHoYoverseゲーマーをつなぐ",
-    "subtitle": "『原神』 · 『崩壊：スターレイル』 · 『ゼンレスゾーンゼロ』",
+    "kicker": "Student Institution of miHoYo Players · UniMelb",
+    "title": "Connecting Hoyoverse Gamers at UniMelb",
+    "subtitle": "Genshin Impact · Honkai: Star Rail · Zenless Zone Zero",
     "primaryCta": {
       "label": "イベントを見る",
       "href": "#events"
@@ -41,19 +41,23 @@
     }
   },
   "committee": {
-    "title": "委員会メンバー",
-    "subtitle": "HoYoverseが大好きなメンバーで運営しています。ホバーで詳しく表示。"
+    "title": "Our Committee",
+    "subtitle": "Run by passionate Hoyoverse players. Hover to learn more.",
+    "hoverProfile": "ホバーでプロフィール表示",
+    "contact": "連絡",
+    "apply": "申請",
+    "favPrefix": "好き: "
   },
   "explore": {
-    "title": "参加・リンク",
-    "subtitle": "SNSでつながろう。イベント情報・お知らせ・交流の場を提供します。"
+    "title": "Explore & Join",
+    "subtitle": "Find us on social media. Join for events, updates, and meetups."
   },
   "footer": {
     "line1": "© 2026 Student Institution of miHoYo Players – University of Melbourne",
-    "line2": "HoYoverse作品への愛で作りました。"
+    "line2": "Made with love for Hoyoverse games."
   },
   "language": {
-    "label": "言語",
+    "label": "Language",
     "options": {
       "en": "EN",
       "zh": "简体中文",
@@ -61,20 +65,33 @@
     }
   },
   "events": {
-    "title": "イベント",
-    "subtitle": "開催予定のイベントをチェックしてください。",
-    "eventCalendar": "イベントカレンダー",
-    "monthGridHint": "月表示グリッド + クリック可能な日付 + イベントカード。",
-    "today": "今日",
-    "previousMonth": "前の月",
-    "nextMonth": "次の月",
-    "weekLabelsHint": "週ラベルはUniMelbの2026年授業期間に準拠",
-    "selectedDate": "選択した日付",
-    "noEvents": "この日にイベントはありません。",
-    "clickHighlightedDay": "ハイライトされた日付をクリックして詳細を表示。",
-    "viewFullCalendar": "学期カレンダーを表示",
-    "suggestEvent": "イベントを提案",
-    "pastHighlights": "過去学期のハイライト",
-    "carouselHint": "自動スクロール（ホバー/タッチで一時停止）。シームレスループ。"
+    "title": "Events",
+    "subtitle": "Learn more for upcoming events.",
+    "eventCalendar": "Event Calendar",
+    "monthGridHint": "Month grid + clickable dates + event cards.",
+    "today": "Today",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "weekLabelsHint": "Week labels follow UniMelb 2026 teaching periods",
+    "selectedDate": "Selected date",
+    "noEvents": "No events on this date.",
+    "clickHighlightedDay": "Click a highlighted day to view event details.",
+    "viewFullCalendar": "View Full Calendar",
+    "suggestEvent": "Suggest an Event",
+    "pastHighlights": "Past Highlights",
+    "carouselHint": "Auto-scrolls (hover / touch to pause). Seamless loop.",
+    "weekdays": {
+      "sun": "日",
+      "mon": "月",
+      "tue": "火",
+      "wed": "水",
+      "thu": "木",
+      "fri": "金",
+      "sat": "土"
+    },
+    "legendOWeek": "O-Week",
+    "legendBreak": "Mid-sem Break",
+    "legendSwot": "SWOTVAC",
+    "legendTeachingWeeks": "Teaching Weeks (label shown on Mondays)"
   }
 }

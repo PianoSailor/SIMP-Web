@@ -3,7 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import AdminHighlightsManager from './AdminHighlightsManager'
 import { loadEvents } from '../utils/loadEvents'
 import InfiniteSeamlessCarousel from './InfiniteSeamlessCarousel'
-import { useSiteContent } from '../utils/useSiteContent'
+import { useContentJson } from '../utils/useContent'
+
+const getLocale = (lang) => {
+  if (lang === 'zh') return 'zh-CN'
+  if (lang === 'ja') return 'ja-JP'
+  return 'en-US'
+}
 
 /**
  * Fallback events (used if CMS events.json is empty / missing)
@@ -150,23 +156,47 @@ function weekOf(date, sem) {
   return idx === -1 ? null : idx + 1
 }
 
-function getUniMelbLabel(date) {
+function getUniMelbLabel(date, lang = 'en') {
   const d = startOfDay(date)
 
-  if (inRange(d, S1.oweek.start, S1.oweek.end)) return { kind: 'oweek', text: 'O-Week' }
-  if (inRange(d, S2.oweek.start, S2.oweek.end)) return { kind: 'oweek', text: 'O-Week' }
+  // Translation mapping
+  const translations = {
+    en: {
+      oweek: 'O-Week',
+      break: 'Mid-sem Break',
+      swot: 'SWOTVAC',
+      week: (num) => `Week ${num}`
+    },
+    zh: {
+      oweek: '迎新周',
+      break: '期中假期',
+      swot: '复习周',
+      week: (num) => `第${num}周`
+    },
+    ja: {
+      oweek: 'O-Week',
+      break: 'Mid-sem Break',
+      swot: 'SWOTVAC',
+      week: (num) => `Week ${num}`
+    }
+  }
 
-  if (inRange(d, S1.break.start, S1.break.end)) return { kind: 'break', text: 'Mid-sem Break' }
-  if (inRange(d, S2.break.start, S2.break.end)) return { kind: 'break', text: 'Mid-sem Break' }
+  const t = translations[lang] || translations.en
 
-  if (inRange(d, S1.swot.start, S1.swot.end)) return { kind: 'swot', text: 'SWOTVAC' }
-  if (inRange(d, S2.swot.start, S2.swot.end)) return { kind: 'swot', text: 'SWOTVAC' }
+  if (inRange(d, S1.oweek.start, S1.oweek.end)) return { kind: 'oweek', text: t.oweek }
+  if (inRange(d, S2.oweek.start, S2.oweek.end)) return { kind: 'oweek', text: t.oweek }
+
+  if (inRange(d, S1.break.start, S1.break.end)) return { kind: 'break', text: t.break }
+  if (inRange(d, S2.break.start, S2.break.end)) return { kind: 'break', text: t.break }
+
+  if (inRange(d, S1.swot.start, S1.swot.end)) return { kind: 'swot', text: t.swot }
+  if (inRange(d, S2.swot.start, S2.swot.end)) return { kind: 'swot', text: t.swot }
 
   const w1 = weekOf(d, S1)
-  if (w1) return { kind: 'week', text: `Week ${w1}` }
+  if (w1) return { kind: 'week', text: t.week(w1) }
 
   const w2 = weekOf(d, S2)
-  if (w2) return { kind: 'week', text: `Week ${w2}` }
+  if (w2) return { kind: 'week', text: t.week(w2) }
 
   return null
 }
@@ -227,7 +257,7 @@ async function loadHighlights() {
 }
 
 export default function Events({ lang = 'en' }) {
-  const site = useSiteContent(lang, FALLBACK)
+  const site = useContentJson(`/content/site_${lang}.json`, FALLBACK)
 
   const navigate = useNavigate()
   // URL-bound admin mode
@@ -293,9 +323,17 @@ export default function Events({ lang = 'en' }) {
   const [selectedISO, setSelectedISO] = useState(() => toISODate(new Date()))
 
   const monthLabel = useMemo(
-    () => monthCursor.toLocaleString(undefined, { month: 'long', year: 'numeric' }),
-    [monthCursor]
+    () => monthCursor.toLocaleString(getLocale(lang), { month: 'long', year: 'numeric' }),
+    [monthCursor, lang]
   )
+
+  const weekdayKeys = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+  const weekdayLabels = weekdayKeys.map(key => site?.events?.weekdays?.[key] || { sun: 'Sun', mon: 'Mon', tue: 'Tue', wed: 'Wed', thu: 'Thu', fri: 'Fri', sat: 'Sat' }[key])
+
+  const legendOWeek = site?.events?.legendOWeek || 'O-Week'
+  const legendBreak = site?.events?.legendBreak || 'Mid-sem Break'
+  const legendSwot = site?.events?.legendSwot || 'SWOTVAC'
+  const legendTeachingWeeks = site?.events?.legendTeachingWeeks || 'Teaching Weeks (label shown on Mondays)'
 
   const monthMatrix = useMemo(() => {
     const first = new Date(monthCursor.getFullYear(), monthCursor.getMonth(), 1)
@@ -345,13 +383,13 @@ export default function Events({ lang = 'en' }) {
   const selectedPretty = useMemo(() => {
     if (!selectedISO) return '—'
     const d = new Date(`${selectedISO}T00:00:00`)
-    return d.toLocaleDateString(undefined, { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' })
-  }, [selectedISO])
+    return d.toLocaleDateString(getLocale(lang), { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' })
+  }, [selectedISO, lang])
 
   const selectedUniLabel = useMemo(() => {
     if (!selectedISO) return null
-    return getUniMelbLabel(new Date(`${selectedISO}T00:00:00`))
-  }, [selectedISO])
+    return getUniMelbLabel(new Date(`${selectedISO}T00:00:00`), lang)
+  }, [selectedISO, lang])
 
   const canPrev = useMemo(() => monthCursor > minMonth, [monthCursor, minMonth])
   const canNext = useMemo(() => monthCursor < maxMonth, [monthCursor, maxMonth])
@@ -402,7 +440,7 @@ export default function Events({ lang = 'en' }) {
             </div>
 
             <div className="dow">
-              <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+              {weekdayLabels.map((label, idx) => <div key={weekdayKeys[idx]}>{label}</div>)}
             </div>
 
             <div className="grid">
@@ -412,7 +450,7 @@ export default function Events({ lang = 'en' }) {
                 const hasEvents = eventsByDate.has(iso)
                 const isSelected = iso === selectedISO
 
-                const uni = getUniMelbLabel(d)
+                const uni = getUniMelbLabel(d, lang)
                 const showWeekOnMonday = uni?.kind === 'week' && d.getDay() === 1 // Monday
                 const showSpecial = uni && uni.kind !== 'week'
 
@@ -443,10 +481,10 @@ export default function Events({ lang = 'en' }) {
             </div>
 
             <div className="legend">
-              <span className="legendItem"><span className="legendSwatch oweek" /> O-Week</span>
-              <span className="legendItem"><span className="legendSwatch break" /> Mid-sem Break</span>
-              <span className="legendItem"><span className="legendSwatch swot" /> SWOTVAC</span>
-              <span className="legendItem"><span className="legendSwatch week" /> Teaching Weeks (label shown on Mondays)</span>
+              <span className="legendItem"><span className="legendSwatch oweek" /> {legendOWeek}</span>
+              <span className="legendItem"><span className="legendSwatch break" /> {legendBreak}</span>
+              <span className="legendItem"><span className="legendSwatch swot" /> {legendSwot}</span>
+              <span className="legendItem"><span className="legendSwatch week" /> {legendTeachingWeeks}</span>
             </div>
           </div>
 
@@ -465,41 +503,19 @@ export default function Events({ lang = 'en' }) {
                   <div className="muted">{site?.events?.clickHighlightedDay}</div>
                 </div>
             ) : (
-              <>
-                <div className="eventsCarousel">
-                                <InfiniteSeamlessCarousel
-                                  ariaLabel="Events carousel"
-                                  secondsPerLoop={18}
-                                  pauseOnHover
-                                  items={selectedEvents}
-                                  renderItem={(e) => (
-                                    <button key={e.id} className="eventCarouselCard" onClick={() => navigate(`/events/${e.slug}`)} type="button">
-                                      <div className="eventMeta">
-                                        <span className="pill">{e.tag || 'Event'}</span>
-                                        <span className="eventDate">{e.date}</span>
-                                      </div>
-                                      <div className="eventTitle">{e.title}</div>
-                                      {e.location ? <div className="eventLocation">{e.location}</div> : null}
-                                    </button>
-                                  )}
-                                />
-                              </div>
-
                 <div className="eventCards">
-                                  {selectedEvents.map((e) => (
-                                      <button key={e.id} className="eventCard" onClick={() => navigate(`/events/${e.slug}`)} type="button">
-                                        <div className="eventMeta">
-                                          <span className="pill">{e.tag || 'Event'}</span>
-                                          <span className="muted">{e.location}</span>
-                                        </div>
-                                        <h3 className="h3">{e.title}</h3>
-                                        <p className="muted">{e.desc}</p>
-                                      </button>
-                                  ))}
-                                </div>
-              </>
+                  {selectedEvents.map((e) => (
+                      <button key={e.id} className="eventCard" onClick={() => navigate(`/events/${e.slug}`)} type="button">
+                        <div className="eventMeta">
+                          <span className="pill">{e.tag || 'Event'}</span>
+                          <span className="muted">{e.location}</span>
+                        </div>
+                        <h3 className="h3">{e.title}</h3>
+                        <p className="muted">{e.desc}</p>
+                      </button>
+                  ))}
+                </div>
             )}
-
 
             <div className="cardActions">
               <button className="btn primary" type="button">{site?.events?.viewFullCalendar}</button>

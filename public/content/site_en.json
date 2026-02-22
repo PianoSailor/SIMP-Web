@@ -42,7 +42,11 @@
   },
   "committee": {
     "title": "Our Committee",
-    "subtitle": "Run by passionate Hoyoverse players. Hover to learn more."
+    "subtitle": "Run by passionate Hoyoverse players. Hover to learn more.",
+    "hoverProfile": "Hover for profile",
+    "contact": "Contact",
+    "apply": "Apply",
+    "favPrefix": "Fav: "
   },
   "explore": {
     "title": "Explore & Join",
@@ -75,6 +79,19 @@
     "viewFullCalendar": "View Full Semester Calendar",
     "suggestEvent": "Suggest an Event",
     "pastHighlights": "Past Semester Highlights",
-    "carouselHint": "Auto-scrolls (hover / touch to pause). Seamless loop."
+    "carouselHint": "Auto-scrolls (hover / touch to pause). Seamless loop.",
+    "weekdays": {
+      "sun": "Sun",
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat"
+    },
+    "legendOWeek": "O-Week",
+    "legendBreak": "Mid-sem Break",
+    "legendSwot": "SWOTVAC",
+    "legendTeachingWeeks": "Teaching Weeks (label shown on Mondays)"
   }
 }

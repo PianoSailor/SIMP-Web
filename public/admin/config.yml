@@ -8,51 +8,6 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-
-  - name: content_default
-    label: Content (Default)
-    files:
-      - file: "public/content/site.json"
-        label: Site (Default)
-        name: site_default
-        format: json
-        fields:
-          - label: Header
-            name: header
-            widget: object
-            fields:
-              - { label: Club Name, name: clubName, widget: string }
-              - { label: Club Short, name: clubShort, widget: string, required: false }
-              - { label: Brand Subtitle, name: brandSub, widget: string, required: false }
-              - { label: Primary Logo, name: logoPrimary, widget: image, required: false }
-              - { label: Secondary Logo, name: logoSecondary, widget: image, required: false }
-              - label: Nav Links
-                name: navLinks
-                widget: list
-                fields:
-                  - { label: Label, name: label, widget: string }
-                  - { label: Target, name: href, widget: string }
-          - label: Instagram Embed (Home page)
-            name: instagramEmbed
-            widget: object
-            fields:
-              - { label: Instagram Embed Post URL (optional override), name: embedUrl, widget: string, required: false }
-              - { label: Instagram Username (for latest fetch), name: username, widget: string, required: false }
-          - label: Language
-            name: language
-            widget: object
-            required: false
-            fields:
-              - { label: Label, name: label, widget: string, required: false }
-              - label: Options
-                name: options
-                widget: object
-                required: false
-                fields:
-                  - { label: EN label, name: en, widget: string, required: false }
-                  - { label: ZH label, name: zh, widget: string, required: false }
-                  - { label: JA label, name: ja, widget: string, required: false }
-
   - name: content_en
     label: Content (EN)
     files:
@@ -114,12 +69,31 @@ collections:
               - { label: Suggest Event Button, name: suggestEvent, widget: string }
               - { label: Past Highlights Title, name: pastHighlights, widget: string }
               - { label: Carousel Hint, name: carouselHint, widget: string, required: false }
+              - label: Weekdays
+                name: weekdays
+                widget: object
+                fields:
+                  - { label: "Sunday", name: "sun", widget: string }
+                  - { label: "Monday", name: "mon", widget: string }
+                  - { label: "Tuesday", name: "tue", widget: string }
+                  - { label: "Wednesday", name: "wed", widget: string }
+                  - { label: "Thursday", name: "thu", widget: string }
+                  - { label: "Friday", name: "fri", widget: string }
+                  - { label: "Saturday", name: "sat", widget: string }
+              - { label: "Legend O-Week", name: legendOWeek, widget: string, required: false }
+              - { label: "Legend Mid-sem Break", name: legendBreak, widget: string, required: false }
+              - { label: "Legend SWOTVAC", name: legendSwot, widget: string, required: false }
+              - { label: "Legend Teaching Weeks", name: legendTeachingWeeks, widget: string, required: false }
           - label: Committee Section
             name: committee
             widget: object
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - { label: "Hover Profile Text", name: hoverProfile, widget: string, required: false }
+              - { label: "Contact Button", name: contact, widget: string, required: false }
+              - { label: "Apply Button", name: apply, widget: string, required: false }
+              - { label: "Favourite Prefix", name: favPrefix, widget: string, required: false }
           - label: Explore Section
             name: explore
             widget: object
@@ -150,6 +124,7 @@ collections:
         name: explore_en
         format: json
         fields:
+          - { label: Instagram Embed URL (optional), name: instagramEmbedUrl, widget: string, required: false }
           - label: Links
             name: links
             widget: list
@@ -178,14 +153,6 @@ collections:
               - { label: Description, name: desc, widget: text, required: false }
               - { label: Cover Image, name: image, widget: image, required: false }
               - { label: Recap (for event page), name: recap, widget: text, required: false }
-              - { label: Event Details (for event detail page), name: details, widget: text, required: false }
-              - label: Social Post Links
-                name: socialLinks
-                widget: list
-                required: false
-                fields:
-                  - { label: Label (optional), name: label, widget: string, required: false }
-                  - { label: URL, name: url, widget: string }
               - label: Gallery Images
                 name: gallery
                 widget: list
@@ -306,12 +273,44 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - { label: Event Calendar, name: eventCalendar, widget: string }
+              - { label: Month Grid Hint, name: monthGridHint, widget: string, required: false }
+              - { label: Today Button Label, name: today, widget: string }
+              - { label: Previous Month Label, name: previousMonth, widget: string }
+              - { label: Next Month Label, name: nextMonth, widget: string }
+              - { label: Week Labels Hint, name: weekLabelsHint, widget: string, required: false }
+              - { label: Selected Date Label, name: selectedDate, widget: string }
+              - { label: No Events Message, name: noEvents, widget: string }
+              - { label: Click Highlighted Day Message, name: clickHighlightedDay, widget: string, required: false }
+              - { label: View Full Calendar Button, name: viewFullCalendar, widget: string }
+              - { label: Suggest Event Button, name: suggestEvent, widget: string }
+              - { label: Past Highlights Title, name: pastHighlights, widget: string }
+              - { label: Carousel Hint, name: carouselHint, widget: string, required: false }
+              - label: Weekdays
+                name: weekdays
+                widget: object
+                fields:
+                  - { label: "Sunday", name: "sun", widget: string }
+                  - { label: "Monday", name: "mon", widget: string }
+                  - { label: "Tuesday", name: "tue", widget: string }
+                  - { label: "Wednesday", name: "wed", widget: string }
+                  - { label: "Thursday", name: "thu", widget: string }
+                  - { label: "Friday", name: "fri", widget: string }
+                  - { label: "Saturday", name: "sat", widget: string }
+              - { label: "Legend O-Week", name: legendOWeek, widget: string, required: false }
+              - { label: "Legend Mid-sem Break", name: legendBreak, widget: string, required: false }
+              - { label: "Legend SWOTVAC", name: legendSwot, widget: string, required: false }
+              - { label: "Legend Teaching Weeks", name: legendTeachingWeeks, widget: string, required: false }
           - label: Committee Section
             name: committee
             widget: object
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - { label: "Hover Profile Text", name: hoverProfile, widget: string, required: false }
+              - { label: "Contact Button", name: contact, widget: string, required: false }
+              - { label: "Apply Button", name: apply, widget: string, required: false }
+              - { label: "Favourite Prefix", name: favPrefix, widget: string, required: false }
           - label: Explore Section
             name: explore
             widget: object
@@ -342,6 +341,7 @@ collections:
         name: explore_zh
         format: json
         fields:
+          - { label: Instagram Embed URL (optional), name: instagramEmbedUrl, widget: string, required: false }
           - label: Links
             name: links
             widget: list
@@ -370,14 +370,6 @@ collections:
               - { label: Description, name: desc, widget: text, required: false }
               - { label: Cover Image, name: image, widget: image, required: false }
               - { label: Recap, name: recap, widget: text, required: false }
-              - { label: Event Details (for event detail page), name: details, widget: text, required: false }
-              - label: Social Post Links
-                name: socialLinks
-                widget: list
-                required: false
-                fields:
-                  - { label: Label (optional), name: label, widget: string, required: false }
-                  - { label: URL, name: url, widget: string }
               - label: Gallery Images
                 name: gallery
                 widget: list
@@ -498,12 +490,44 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - { label: Event Calendar, name: eventCalendar, widget: string }
+              - { label: Month Grid Hint, name: monthGridHint, widget: string, required: false }
+              - { label: Today Button Label, name: today, widget: string }
+              - { label: Previous Month Label, name: previousMonth, widget: string }
+              - { label: Next Month Label, name: nextMonth, widget: string }
+              - { label: Week Labels Hint, name: weekLabelsHint, widget: string, required: false }
+              - { label: Selected Date Label, name: selectedDate, widget: string }
+              - { label: No Events Message, name: noEvents, widget: string }
+              - { label: Click Highlighted Day Message, name: clickHighlightedDay, widget: string, required: false }
+              - { label: View Full Calendar Button, name: viewFullCalendar, widget: string }
+              - { label: Suggest Event Button, name: suggestEvent, widget: string }
+              - { label: Past Highlights Title, name: pastHighlights, widget: string }
+              - { label: Carousel Hint, name: carouselHint, widget: string, required: false }
+              - label: Weekdays
+                name: weekdays
+                widget: object
+                fields:
+                  - { label: "Sunday", name: "sun", widget: string }
+                  - { label: "Monday", name: "mon", widget: string }
+                  - { label: "Tuesday", name: "tue", widget: string }
+                  - { label: "Wednesday", name: "wed", widget: string }
+                  - { label: "Thursday", name: "thu", widget: string }
+                  - { label: "Friday", name: "fri", widget: string }
+                  - { label: "Saturday", name: "sat", widget: string }
+              - { label: "Legend O-Week", name: legendOWeek, widget: string, required: false }
+              - { label: "Legend Mid-sem Break", name: legendBreak, widget: string, required: false }
+              - { label: "Legend SWOTVAC", name: legendSwot, widget: string, required: false }
+              - { label: "Legend Teaching Weeks", name: legendTeachingWeeks, widget: string, required: false }
           - label: Committee Section
             name: committee
             widget: object
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - { label: "Hover Profile Text", name: hoverProfile, widget: string, required: false }
+              - { label: "Contact Button", name: contact, widget: string, required: false }
+              - { label: "Apply Button", name: apply, widget: string, required: false }
+              - { label: "Favourite Prefix", name: favPrefix, widget: string, required: false }
           - label: Explore Section
             name: explore
             widget: object
@@ -534,6 +558,7 @@ collections:
         name: explore_ja
         format: json
         fields:
+          - { label: Instagram Embed URL (optional), name: instagramEmbedUrl, widget: string, required: false }
           - label: Links
             name: links
             widget: list
@@ -562,14 +587,6 @@ collections:
               - { label: Description, name: desc, widget: text, required: false }
               - { label: Cover Image, name: image, widget: image, required: false }
               - { label: Recap, name: recap, widget: text, required: false }
-              - { label: Event Details (for event detail page), name: details, widget: text, required: false }
-              - label: Social Post Links
-                name: socialLinks
-                widget: list
-                required: false
-                fields:
-                  - { label: Label (optional), name: label, widget: string, required: false }
-                  - { label: URL, name: url, widget: string }
               - label: Gallery Images
                 name: gallery
                 widget: list

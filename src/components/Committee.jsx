@@ -1,4 +1,3 @@
-import { useSiteContent } from '../utils/useSiteContent'
 import { useContentJson } from '../utils/useContent'
 
 const FALLBACK = {
@@ -15,7 +14,7 @@ const FALLBACK = {
 }
 
 export default function Committee({ lang = 'en' }) {
-  const site = useSiteContent(lang, { committee: { title: FALLBACK.title, subtitle: FALLBACK.subtitle } })
+  const site = useContentJson(`/content/site_${lang}.json`, { committee: { title: FALLBACK.title, subtitle: FALLBACK.subtitle } })
   const cms = useContentJson(`/content/committee_${lang}.json`, { members: [] })
 
   const title = site?.committee?.title || FALLBACK.title
@@ -59,8 +58,8 @@ export default function Committee({ lang = 'en' }) {
               </div>
 
               <div className="memberBottom">
-                <div className="pill">Fav: {m.fav || 'Hoyoverse'}</div>
-                <div className="muted">Hover for profile</div>
+                <div className="pill">{site?.committee?.favPrefix || 'Fav: '}{m.favGame || m.fav || 'Hoyoverse'}</div>
+                <div className="muted">{site?.committee?.hoverProfile || 'Hover for profile'}</div>
               </div>
 
               {/* Hover details (kept) */}
@@ -71,20 +70,20 @@ export default function Committee({ lang = 'en' }) {
                 <div className="hoverActions">
                   {m.contactUrl ? (
                     <a className="btn secondary small" href={m.contactUrl} target="_blank" rel="noreferrer">
-                      Contact
+                      {site?.committee?.contact || 'Contact'}
                     </a>
                   ) : (
                     <button className="btn secondary small" type="button" disabled>
-                      Contact
+                      {site?.committee?.contact || 'Contact'}
                     </button>
                   )}
                   {m.applyUrl ? (
                     <a className="btn primary small" href={m.applyUrl} target="_blank" rel="noreferrer">
-                      Apply
+                      {site?.committee?.apply || 'Apply'}
                     </a>
                   ) : (
                     <button className="btn primary small" type="button" disabled>
-                      Apply
+                      {site?.committee?.apply || 'Apply'}
                     </button>
                   )}
                 </div>
