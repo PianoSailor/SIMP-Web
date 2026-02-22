@@ -12,11 +12,7 @@
       "date": "2025-07-24",
       "desc": "a event",
       "gallery": [
-        "/images/uploads/image_20260131215250.jpg",
-        "/images/uploads/image_20260131215243.jpg",
-        "/images/uploads/image_20260131215227.jpg",
-        "/images/uploads/image_20260131215207.jpg",
-        "/images/uploads/image_20260131215237.jpg"
+        "/images/uploads/524833876_17860048401453391_6455057659707448400_n.jpg"
       ],
       "location": "Market Hall (Building 189)",
       "title": "Winterfest 2025",
@@ -28,7 +24,7 @@
       "socialLinks": [
         {
           "label": "Instagram",
-          "url": "https://www.instagram.com/p/DMtt78aBHzf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          "url": "https://www.instagram.com/reel/DNMp1E3Bebq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         }
       ],
       "date": "2025-08-01",
@@ -41,6 +37,101 @@
       "id": "001",
       "image": "/images/uploads/525261553_17860174815453391_5434559213015145262_n-1-.jpg",
       "recap": "Thank you to everyone who came to our welcome party! It was amazing meeting so many of you - there was around 100 of us that day, getting to know each other and playing fun games together! We hope to see all of you at our future events!"
+    },
+    {
+      "socialLinks": [
+        {
+          "label": "instagram",
+          "url": "https://www.instagram.com/p/DNxXckbQifc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        },
+        {
+          "url": "https://www.instagram.com/reel/DNxYgJxQm2X/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+          "label": "Video"
+        }
+      ],
+      "date": "2025-08-22",
+      "desc": "The first ever Unimelb Holy Grail War is approaching! Whether you seek the Holy Grail, or simply want to lay back and have fun, come along with your friends to enjoy a great night!\nNot only will we be hosting the Competition, we will have the classic Genshin TCG, Guess Who and more games for you to discover on the day!",
+      "gallery": [
+        "/images/uploads/539433937_17863241508453391_6652397340538755564_n.jpg",
+        "/images/uploads/538921083_17863241385453391_6658031495841984725_n.jpg",
+        "/images/uploads/538441074_17863241490453391_6525644743383980051_n.jpg",
+        "/images/uploads/538800648_17863242384453391_2576094084866152135_n.jpg"
+      ],
+      "location": "Room 419, 420, Building 263 (Kwong Lee Dow)",
+      "title": "Unimelb Holy Grail War",
+      "id": "002",
+      "image": "/images/uploads/532083725_17862309963453391_4778455681542684251_n.jpg",
+      "recap": "SIMP HSR HOLY GRAIL WAR COMPETITION HIGHIGHTS!\n\nThank you everyone for attending our event! It was great to see everyone bringing their devices and battling it out in the new Holy Grail Game mode! It was also nice to have another community members having some fun with our NEWLY purchased mihoyo board games including “Liyue millennial board game” and the offical Genshin TCG cards!\n\nCongrats to Jason for winning our Holy Grail, Jimmy and Leli for placing 2nd place and 3rd place respectively.\n\nWhat did you think of the event? Let us know down in the comments~!\n\nHope you see all of you next time!"
+    },
+    {
+      "id": "003",
+      "date": "2025-09-12",
+      "title": "GeoGuessr Trivia",
+      "location": "Room 109, L1, Alan Gilbert Building (Building 104)",
+      "desc": "Ready to test your traveler’s knowledge? 🌍\nJoin us for a night of GeoGuessr x Trivia with a Genshin twist!\nFrom spotting Mondstadt landmarks to guessing character features, this event will challenge both your adventuring skills and your brainpower. 🗺️🧩\n\n📍 Room 109, L1, Alan Gilbert Building (Building 104)\n📅 Friday 12th September, 5-7pm main event, 7-8pm leisurely fun!\n🎁 Prizes await the sharpest adventurers!\n\nDon’t miss out—assemble your party and let’s see who’s the ultimate explorer. 🌟",
+      "image": "/images/uploads/541995407_17864418690453391_3403508206082372513_n.jpg",
+      "gallery": [
+        "/images/uploads/dji_20250912_171404_381.jpg",
+        "/images/uploads/dji_20250912_171404_381.jpg",
+        "/images/uploads/dji_20250912_174825_436.jpg"
+      ]
+    },
+    {
+      "socialLinks": [
+        {
+          "url": "https://www.instagram.com/reel/DPQZVW0AdND/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+          "label": "Instagram"
+        }
+      ],
+      "date": "2025-09-25",
+      "desc": "🎲✨ Ready to shuffle decks and roll dice? Join us for Board Game Night featuring Genshin TCG & the iconic Liyue Millennial! 🀄️\n\n🌟 Bring your friends, test your skills, and immerse yourself in strategy, laughter, and adventure. Whether you’re a TCG pro or just here for the fun, there’s a seat at the table waiting for you!\n\n📍 David Caro Building (192), Room 204 & 205\n🗓️ Thursday 25th September, 5:00PM to 8:00PM\n\nDon’t miss out—let the games begin! ",
+      "gallery": [
+        "/images/uploads/dji_20250925_172255_963.jpg",
+        "/images/uploads/dji_20250925_184354_390.jpg",
+        "/images/uploads/dji_20250925_171658_193.jpg",
+        "/images/uploads/dji_20250925_170843_411.jpg"
+      ],
+      "location": "David Caro Building (192), Room 204 & 205",
+      "title": "Board Game Night",
+      "id": "004",
+      "image": "/images/uploads/551317895_17866053900453391_2035308335741478229_n.jpg",
+      "recap": "🎲 Take a peek into SIMP’s BOARD GAMES NIGHT last week! 🃏\n\nThank you all who came down last week to enjoy a night of poker, Liyue Millennial and Genshin TCG Card game!\n\nLet us know what games you want to try at next board games night!\n\nThe Student Institution of Mihoyo Players is an UMSU-affiliated club at the University of Melbourne."
+    },
+    {
+      "details": "",
+      "socialLinks": [
+        {
+          "url": "https://www.instagram.com/reel/DP-gYZwARNB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+          "label": "Instagram"
+        }
+      ],
+      "date": "2025-10-10",
+      "desc": "Hoyo Kitchen! 🥘\n\nCome down to SIMP’s Hoyo Kitchen for a tasty treat and enjoy some hoyo-inspired dishes!\n\nFor this event, you have the opportunity to be the chef behind the counter and bring hoyo-dishes to life!\n\nWe will provide for you:\n- 3 recipes of Genshin & HSR cuisines + ingredients\n- Ingredients if you want to make your own cuisine (please tell us what you need in google form, we will buy them for you!)\n- Pizza & drinks during dinner time\n\nWhat we need from you:\n- $5 entry fee, paid on UMSU website\n- DoFoodSafely Certificate (link in sign-up form)\n- We would also like everyone to sign up early, so that we can better prepare for the event!\n\nTime: 3-8pm\nDate: 10th Oct (Friday)\nLocation: Student Kitchen (Student Pavillion level 4)",
+      "gallery": [
+        "/images/uploads/dji_20251010_161552_224.jpg",
+        "/images/uploads/img_5429.jpg",
+        "/images/uploads/img_5425.jpg",
+        "/images/uploads/img_5418.jpg"
+      ],
+      "location": "Student Kitchen (Student Pavillion level 4)",
+      "title": "Hoyo Kitchen",
+      "id": "005",
+      "image": "/images/uploads/558100223_17867414940453391_2070261792239894309_n.jpg",
+      "recap": "🥘SIMP’s Kitchen Event Highlights! 🔪\n\nThank you to all the chefs and customers who attended our SIMP Kitchen event! If you enjoyed this event, make sure to look forward to similar future events~"
+    },
+    {
+      "id": "006",
+      "desc": "🌟 The semester’s almost over… and we’re ending it with a bang! 🌟\nJoin us for SIMP’s 2025 Finale: Hoyoverse Around the World! 🌎\n\n🎮 Games, charades, puzzles, art showcases, and maybe even a secret encounter... 👀\n🍕 FREE food and drinks provided!\n\n📅 Thursday 23rd Oct | 5PM\n📍 Alan Gilbert G18, G20, G22\n\nCome celebrate the end of semester with your fellow travellers! ",
+      "date": "2025-10-23",
+      "title": "Hoyoverse Around the World",
+      "location": "Alan Gilbert G18, G20, G22",
+      "image": "/images/uploads/566762350_17869219227453391_1672830014071021392_n.jpg",
+      "gallery": [
+        "/images/uploads/dji_20251023_173924_790.jpg",
+        "/images/uploads/dji_20251023_174639_315.jpg",
+        "/images/uploads/image_20260131215250.jpg",
+        "/images/uploads/image_20260131215243.jpg"
+      ]
     }
   ]
 }
