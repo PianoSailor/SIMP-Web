@@ -30,7 +30,12 @@ export default function CommitteePage({ lang = 'en' }) {
           {members.slice(0, 8).map((m, idx) => (
             <div key={m.name || idx} className="committeeCardLarge">
               <div className="committeeCardTop">
-                {m.photo ? <img className="committeePhotoLarge" src={m.photo} alt={m.name || 'Committee'} /> : <div className="committeePhotoLarge ph" />}
+                <img
+                  className="avatar"
+                  src={m.photo || '/images/committee/user.png'}
+                  alt={m.name || 'Committee member'}
+                  loading="lazy"
+                />
                 <div className="committeeMeta">
                   <div className="committeeName">{m.name || 'Member'}</div>
                   <div className="committeeRole">{m.role || ''}</div>

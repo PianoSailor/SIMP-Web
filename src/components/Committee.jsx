@@ -46,11 +46,12 @@ export default function Committee({ lang = 'en' }) {
               className="memberCard"
             >
               <div className="memberTop">
-                {m.photo ? (
-                  <img className="avatar" src={m.photo} alt={m.name || 'Committee member'} loading="lazy" />
-                ) : (
-                  <div className="avatar" aria-hidden="true" />
-                )}
+                <img
+                  className="avatar"
+                  src={m.photo || '/images/committee/user.png'}
+                  alt={m.name || 'Committee member'}
+                  loading="lazy"
+                />
                 <div>
                   <div className="memberName">{m.name}</div>
                   <div className="muted">{m.role}</div>
