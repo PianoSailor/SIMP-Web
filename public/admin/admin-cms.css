@@ -1,0 +1,22 @@
+#nc-root button,
+#nc-root [role='button'],
+#nc-root a,
+#nc-root input,
+#nc-root select,
+#nc-root textarea,
+#nc-root li[class*='ListCard-card-card'],
+#nc-root a[class*='ListCardLink'] {
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+#nc-root button:hover,
+#nc-root [role='button']:hover,
+#nc-root a:hover,
+#nc-root input:hover,
+#nc-root select:hover,
+#nc-root textarea:hover,
+#nc-root li[class*='ListCard-card-card']:hover,
+#nc-root a[class*='ListCardLink']:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
