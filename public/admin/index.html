@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <title>Content Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      #nc-root button,
+      #nc-root [role='button'],
+      #nc-root a,
+      #nc-root input,
+      #nc-root select,
+      #nc-root textarea {
+        transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+      }
+
+      #nc-root button:hover,
+      #nc-root [role='button']:hover,
+      #nc-root a:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      }
+    </style>
   </head>
 
   <body>
