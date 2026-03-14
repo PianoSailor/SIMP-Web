@@ -8,11 +8,12 @@
 
 ```bash
 npm install
-npm run dev
+npm run build
+npm run dev -- --debug
 ```
 
 ## CMS
 
-- Go to `/admin` on the deployed site
-- Login via Netlify Identity (invite-only recommended)
+- Access `/admin`.
+- Login via Netlify Identity if you are on deployed site (invite-only recommended)
 
